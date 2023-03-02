@@ -15,6 +15,11 @@ class Silo(AutotoolsPackage):
     url = "https://wci.llnl.gov/sites/wci/files/2021-01/silo-4.10.2.tgz"
 
     version(
+        "4.11.1",
+        sha256="76b869373f5d3e9d1d50112914ff97f043240911c13f1e0737b5d65e9c8cc865",
+        url="file:///usr/gapps/bdivrepo/tarballs/silo/silo-4.11.1-pre1.tar.gz",
+    )
+    version(
         "4.11",
         sha256="ab936c1f4fc158d9fdc4415965f7d9def7f4abeca596fe5a25bd8485654898ac",
         url="https://github.com/LLNL/Silo/releases/download/v4.11/silo-4.11.tar.gz",
@@ -86,7 +91,7 @@ class Silo(AutotoolsPackage):
     conflicts("+fpzip", when="@4.10.2-bsd,4.11-bsd")
 
     # zfp include missing
-    patch("zfp_error.patch", when="@4.11 +hdf5")
+    patch("zfp_error.patch", when="@4.11.0 +hdf5")
 
     def flag_handler(self, name, flags):
         spec = self.spec

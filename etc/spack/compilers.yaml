@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    spec: intel@19.1.2
+    operating_system: rhel8
+    target: x86_64
+    paths:
+      cc: /usr/tce/packages/mvapich2/mvapich2-2.3.6-intel-classic-19.1.2/bin/mpicc
+      cxx: /usr/tce/packages/mvapich2/mvapich2-2.3.6-intel-classic-19.1.2/bin/mpic++
+      f77: /usr/tce/packages/mvapich2/mvapich2-2.3.6-intel-classic-19.1.2/bin/mpif77
+      fc: /usr/tce/packages/mvapich2/mvapich2-2.3.6-intel-classic-19.1.2/bin/mpifort
+    flags: {}
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@19.1.2
+    paths:
+      cc: /usr/tce/packages/mvapich2/mvapich2-2.3-intel-19.1.2/bin/mpicc
+      cxx: /usr/tce/packages/mvapich2/mvapich2-2.3-intel-19.1.2/bin/mpic++
+      f77: /usr/tce/packages/mvapich2/mvapich2-2.3-intel-19.1.2/bin/mpif77
+      fc: /usr/tce/packages/mvapich2/mvapich2-2.3-intel-19.1.2/bin/mpifort
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
