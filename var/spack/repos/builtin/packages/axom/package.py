@@ -40,6 +40,7 @@ class Axom(CachedCMakePackage, CudaPackage, ROCmPackage):
 
     version("main", branch="main")
     version("develop", branch="develop")
+    version("0.7.1", branch="feature/gunney/marching-cubes-algo")
     version("0.7.0", tag="v0.7.0")
     version("0.6.1", tag="v0.6.1")
     version("0.6.0", tag="v0.6.0")
@@ -113,6 +114,8 @@ class Axom(CachedCMakePackage, CudaPackage, ROCmPackage):
     depends_on("scr~fortran", when="+scr~fortran")
 
     with when("+umpire"):
+#       depends_on("umpire@2022.10.0:", when="@0.7.1")
+#       depends_on("umpire@2022.03.0", when="@0.7.0")
         depends_on("umpire@2022.03.0:", when="@0.7.0:")
         depends_on("umpire@6.0.0", when="@0.6.0")
         depends_on("umpire@5:5.0.1", when="@:0.5.0")
