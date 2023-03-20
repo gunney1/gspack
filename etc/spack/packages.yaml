@@ -188,7 +188,7 @@ packages:
   conduit:
     variants: ~shared~testa+hdf5+mpi+python
   hdf5:
-    variants: ~shared~mpi
+    variants: ~shared
     require: '@1.12.2'
   hypre:
     version: [2.24.0]
