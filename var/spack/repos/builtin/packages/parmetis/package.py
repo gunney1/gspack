@@ -58,6 +58,7 @@ class Parmetis(CMakePackage):
         options = []
         options.extend(
             [
+                #"--log-level=DEBUG",
                 "-DGKLIB_PATH:PATH=%s/GKlib" % spec["metis"].prefix.include,
                 "-DMETIS_PATH:PATH=%s" % spec["metis"].prefix,
                 "-DCMAKE_C_COMPILER:STRING=%s" % spec["mpi"].mpicc,
