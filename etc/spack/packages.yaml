@@ -200,6 +200,8 @@ packages:
     require: '@4.11.1'
   umpire:
     variants: ~shared~examples
+  # cmake:
+  #   version: [3.25.1]
   cmake:
     version: [3.23.1]
     buildable: false
