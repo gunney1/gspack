@@ -26,6 +26,7 @@ compilers:
     environment: {}
     extra_rpaths: []
 - compiler:
+    # intel@19.toss came from Ares
     spec: intel@19.toss
     environment:
       set:
@@ -44,12 +45,28 @@ compilers:
       fc: /usr/tce/packages/intel/intel-19.1.2/bin/ifort
     target: x86_64
 - compiler:
+    spec: clang@10.0.0
+    environment: {}
+    extra_rpaths: []
+    flags:
+      cflags: --gcc-toolchain=/usr/tce/packages/gcc/gcc-8.3.1
+      cxxflags: --gcc-toolchain=/usr/tce/packages/gcc/gcc-8.3.1
+    modules:
+    - clang/10.0.0
+    operating_system: rhel7
+    paths:
+      cc: /usr/tce/packages/clang/clang-10.0.0/bin/clang
+      cxx: /usr/tce/packages/clang/clang-10.0.0/bin/clang++
+      f77: /usr/tce/packages/gcc/gcc-8.3.1/bin/gfortran
+      fc: /usr/tce/packages/gcc/gcc-8.3.1/bin/gfortran
+    target: x86_64
+- compiler:
     spec: clang@14.0.4
     paths:
       cc: /usr/tce/bin/clang-14.0.4
       cxx: /usr/tce/bin/clang++-14.0.4
-      f77: null
-      fc: null
+      f77: /usr/tce/packages/gcc/gcc-8.3.1/bin/gfortran
+      fc: /usr/tce/packages/gcc/gcc-8.3.1/bin/gfortran
     flags: {}
     operating_system: rhel7
     target: x86_64
