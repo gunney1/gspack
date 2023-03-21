@@ -13,15 +13,6 @@ packages:
 # Lock down which MPI we are using
   mpi:
     buildable: false
-    require: mvapich2@2.3%intel@19.1.2
-    # require:
-    # - one_of: [mvapich2@2.3%intel@19.1.2 arch=linux-rhel7-broadwell]
-    # - one_of: [mvapich2@2.3.6%intel@19.1.2 arch=linux-rhel8-ivybridge]
-    # - one_of: [mvapich2@2.3%intel@19.1.2 process_managers=slurm arch=linux-rhel7-broadwell]
-    # - one_of: [mvapich2@2.3%intel@19.1.2 arch=linux-rhel7-broadwell, mvapich2@2.3.6%intel@19.1.2 arch=linux-rhel8-ivybridge]
-    # - one_of: [mvapich2@2.3%intel@19.1.2 process_managers=slurm arch=linux-rhel7-broadwell, mvapich2@2.3.6%intel@19.1.2 process_managers=slurm arch=linux-rhel8-ivybridge]
-    # - one_of: ["mvapich2@2.3%intel@19.1.2 arch=linux-rhel7-broadwell", "mvapich2@2.3.6%intel@19.1.2 arch=linux-rhel8-ivybridge"]
-    # - one_of: ["mvapich2@2.3.6%intel@19.1.2 process_managers=slurm arch=linux-rhel8-ivybridge", "mvapich2@2.3%intel@19.1.2 process_managers=slurm arch=linux-rhel8-ivybridge"]
   mvapich2:
     buildable: false
     # externals:
@@ -31,7 +22,8 @@ packages:
     #   prefix: /usr/tce/packages/mvapich2/mvapich2-2.3-intel-19.1.2/
     externals:
     - spec: mvapich2@2.3.6%intel@19.1.2 process_managers=slurm os=rhel8
-      prefix: /usr/tce/packages/mvapich2/mvapich2-2.3.6-intel-classic-19.1.2/
+      # prefix: /usr/tce/packages/mvapich2/mvapich2-2.3.6-intel-classic-19.1.2/
+      prefix: /usr/tce/packages/intel-classic/intel-classic-19.1.2
     - spec: mvapich2@2.3%intel@19.1.2 process_managers=slurm os=rhel7
       prefix: /usr/tce/packages/mvapich2/mvapich2-2.3-intel-19.1.2/
 # System-provided compilers
