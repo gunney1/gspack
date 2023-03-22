@@ -35,7 +35,7 @@ packages:
   # blas is a bit more complicated because its a virtual package so fake it with
   # the following per spack docs
   netlib-lapack:
-    buildable: false
+    buildable: true
     externals:
     - spec: netlib-lapack@3.6.1
       prefix: /usr
@@ -56,7 +56,7 @@ packages:
     - spec: binutils@2.27
       prefix: /usr
   bzip2:
-    buildable: false
+    buildable: true
     externals:
     - spec: bzip2@1.0.6
       prefix: /usr
@@ -131,7 +131,7 @@ packages:
     - spec: pkg-config@0.27.1
       prefix: /usr
   readline:
-    buildable: false
+    buildable: true
     externals:
     - spec: readline@6.2
       prefix: /usr
