@@ -14,6 +14,7 @@ class Silo(AutotoolsPackage):
     homepage = "https://wci.llnl.gov/simulation/computer-codes/silo"
     url = "https://wci.llnl.gov/sites/wci/files/2021-01/silo-4.10.2.tgz"
 
+    # BTNG added: Can't get 4.11.1 from github.  This came from bdiv.
     version(
         "4.11.1",
         sha256="76b869373f5d3e9d1d50112914ff97f043240911c13f1e0737b5d65e9c8cc865",
