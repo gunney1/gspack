@@ -61,6 +61,25 @@ compilers:
       fc: /usr/tce/packages/gcc/gcc-8.3.1/bin/gfortran
     target: x86_64
 - compiler:
+    environment:
+      set:
+        SPACK_TARGET_ARGS: ""
+    extra_rpaths: []
+    flags:
+      cflags: -std=gnu11 -O2
+      cxxflags: -std=c++14 -O2
+      fflags: -O2
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /usr/tce/packages/clang/clang-10.0.1/bin/clang
+      cxx: /usr/tce/packages/clang/clang-10.0.1/bin/clang++
+      f77: /usr/tce/packages/gcc/gcc-8.1.0/bin/gfortran
+      fc: /usr/tce/packages/gcc/gcc-8.1.0/bin/gfortran
+    spec: clang@10.toss
+    target: x86_64
+# %clang@14.0.4 lacks mpicc and mpicxx on rzgenie, so Spack substituted %intel.  Not good!
+- compiler:
     spec: clang@14.0.4
     paths:
       cc: /usr/tce/bin/clang-14.0.4
@@ -86,3 +105,21 @@ compilers:
     modules: []
     environment: {}
     extra_rpaths: []
+- compiler:
+    environment:
+      set:
+        SPACK_TARGET_ARGS: ""
+    extra_rpaths: []
+    flags:
+      cflags: --gcc-toolchain=/usr/tce/packages/gcc/gcc-10.2.1 -std=gnu11 -O2
+      cxxflags: --gcc-toolchain=/usr/tce/packages/gcc/gcc-10.2.1 -std=c++14 -O2
+      fflags: -O2
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /usr/tce/packages/clang/clang-14.0.4/bin/clang
+      cxx: /usr/tce/packages/clang/clang-14.0.4/bin/clang++
+      f77: /usr/tce/packages/gcc/gcc-10.2.1/bin/gfortran
+      fc: /usr/tce/packages/gcc/gcc-10.2.1/bin/gfortran
+    spec: clang@14.toss
+    target: x86_64
